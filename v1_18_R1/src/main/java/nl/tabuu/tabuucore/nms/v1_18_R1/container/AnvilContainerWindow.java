@@ -23,6 +23,7 @@ public class AnvilContainerWindow extends ContainerWindow implements IAnvilConta
         BlockPosition blockPosition = new BlockPosition(0, 0, 0);
         _container = new ContainerAnvil(getId(), getEntityPlayer().fq(), ContainerAccess.a(world, blockPosition));
         _container.checkReachable = false;
+        _container.maximumRepairCost = 1; // check of repairCost >= maximumRepairCost leads to repairCost = maximumRepairCost - 1 = 0
     }
 
     @Override
